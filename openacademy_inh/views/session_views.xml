@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+        <record id="openacademy_session_form_inherit" model="ir.ui.view">
+            <field name="name">openacademy.session.form.inherit</field>
+            <field name="model">openacademy.session</field>
+            <field name="inherit_id" ref="openacademy.openacademy_session_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='active']" position="after">
+                    <field name="test"/>
+                </xpath>
+                <xpath expr="//field[@name='course_id']" position="attributes">
+                    <attribute name="required">True</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
